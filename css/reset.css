@@ -46,3 +46,27 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway/Raleway-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway/Raleway-Bold.ttf");
+    font-weight: bold;
+    font-style: bold;
+  }
+  @font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway/Raleway-Medium.ttf");
+    font-weight: bolder;
+    font-style: bolder;
+  }
+  @font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway/Raleway-Italic.ttf");
+    font-style: italic;
+  }
