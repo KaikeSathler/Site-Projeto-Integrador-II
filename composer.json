@@ -1,0 +1,15 @@
+{
+    "name": "kaike/projeto_artes_ifpr",
+    "autoload": {
+        "psr-4": {
+            "Kaike\\ProjetoArtesIfpr\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kaike da Silva Sathler",
+            "email": "104788755+KaikeSathler@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

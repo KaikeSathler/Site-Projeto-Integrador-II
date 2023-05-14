@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/input.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)">
+    <section class="min-h-screen flex items-center justify-center">
+      <div
+        class="bg-white/80 backdrop-blur flex rounded-2xl max-w-3xl p-5 shadow-xl items-center"
+      >
+        <div class="px-8 md:px-auto">
+          <h2 class="text-center font-medium3 text-2xl text-[#002D74]">
+            Login
+          </h2>
+          <p class="text-xs mt-4 text-[#002D74]"></p>
+          <form
+            action="/php/login.php"
+            class="flex flex-col gap-4"
+            aria-required="false"
+            method="POST"
+          >
+            <div class="relative">
+              <input
+                class="p-2 mt-8 rounded-md focus:ring-2 border focus:outline-none w-full"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+              <div
+                class="text-red-900 bg-red-300 p-2 rounded mt-2 hidden"
+                id="erroEmail"
+              >
+                * Erro email.
+              </div>
+            </div>
+            <div class="relative">
+              <input
+                class="p-2 rounded-md focus:ring-2 focus:outline-none border w-full"
+                type="password"
+                name="senha"
+                placeholder="Senha"
+              />
+              <div
+                class="text-red-900 bg-red-300 p-2 rounded mt-2 hidden"
+                id="erroSenha"
+              >
+                * Erro senha.
+              </div>
+              <div
+                class="w-full text-xs border-b border-gray-400 py-4 text-[#002D74]"
+              >
+                <a class="text-sm text-right block" href="#"
+                  >Esqueceu sua senha?</a
+                >
+              </div>
+            </div>
+            <button
+              class="bg-[#002D74] rounded-lg hover:bg-[#0947ac] text-white py-2 hover:scale-105 duration-300"
+            >
+              Login
+            </button>
+            <div class="mt-5 text-center text-xs text-[#002D74]">
+              <a class="text-sm" href="#"
+                >Não possui uma conta?<a href="./registrar.html" class="text-sm font-bold px-2"
+                  >Registre-se</a
+                ></a
+              >
+            </div>
+          </form>
+          <div class="mt-6 grid grid-cols-3 items-center text-gray-400">
+            <hr class="border-gray-400" />
+            <p class="text-center text-sm">OU</p>
+            <hr class="border-gray-400" />
+          </div>
+          <button
+            class="bg-white border hover:ring-2 py-2 w-full rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]"
+          >
+            <img class="w-9" src="../img/icon/logo_google_icon.png" alt="" />
+            Login com Google
+          </button>
+          <button
+            class="bg-white hover:ring-2 border py-2 w-full rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]"
+          >
+            <img class="w-9" src="../img/icon/GitHub-Mark.png" alt="" />
+            Login com Github
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    let formulario = document.querySelector("form");
+
+    let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    let regex2 = new RegExp(/[$&+,:;=?@#|'<>.^*()%!-]/);
+
+    let campoEmail = formulario.elements[0];
+    let campoSenha = formulario.elements[1];
+
+    document
+      .getElementsByName("email")[0]
+      .addEventListener("input", function (e) {
+        if (!regex.test(e.target.value)) {
+          e.target.classList.add("border-red-500");
+        } else {
+          e.target.classList.remove("border-red-500");
+        }
+      });
+
+    document
+      .getElementsByName("senha")[0]
+      .addEventListener("input", function (e) {
+        console.log(e.target.value);
+        if (regex2.test(e.target.value)) {
+          e.target.classList.add("border-red-500");
+        } else {
+          e.target.classList.remove("border-red-500");
+        }
+      });
+
+    formulario.addEventListener("submit", function (e) {
+      if (campoSenha.value.length < 3) {
+        document.getElementById("erroSenha").classList.remove("hidden");
+        document.getElementById("erroSenha").classList.add("block");
+        e.preventDefault();
+      } else {
+        document.getElementById("erroSenha").classList.add("hidden");
+        document.getElementById("erroSenha").classList.remove("block");
+      }
+
+      if (!regex.test(campoEmail.value)) {
+        document.getElementById("erroEmail").classList.remove("hidden");
+        document.getElementById("erroEmail").classList.add("block");
+        e.preventDefault();
+      } else {
+        document.getElementById("erroEmail").classList.add("hidden");
+        document.getElementById("erroEmail").classList.remove("block");
+      }
+    });
+  </script>
+</html>

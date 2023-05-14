@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "ui-avatar-svg": "^1.0.0"
+  }
+}
