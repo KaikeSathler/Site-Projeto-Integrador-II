@@ -6,7 +6,9 @@ require ("php/conexao.php");
 
 $usuario = null;
 
-if($_SESSION['ARTESDB_SESSION']["logado"]) {
+if(!empty($_SESSION['ARTESDB_SESSION'])) {
+
+  if($_SESSION['ARTESDB_SESSION']["logado"]) {
   $db = new Conexao();
   $usuario = $db->buscarUsuario($_SESSION['ARTESDB_SESSION']['email']);
 }
@@ -25,6 +27,10 @@ if($sobrenome[0] == " ") {
 }
 
 $inicial = strtoupper($inicial);
+
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -40,9 +46,17 @@ $inicial = strtoupper($inicial);
     <link rel="stylesheet" href="./css/input.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title></title>
+    <style>
+      * {
+        transition: all 250ms ease-in-out;
+      }
+      </style>
   </head>
   <body class="bg-white dark:bg-gray-950">
     <header>
+      <div class = "sm:justify-center flex">
+      <img src="./img/icon/arte.png" class="select-none m-auto w-12 items-center">
+      </div>
       <nav class="bg-sky-300 p-4 w-100 dark:bg-slate-800">
         <ul class="flex gap-4 justify-between items-center">
           <div class="flex gap-4 items-center">
@@ -51,10 +65,14 @@ $inicial = strtoupper($inicial);
           </div>
           <div class="flex gap-1 items-center">
             <?php
-            if($_SESSION['ARTESDB_SESSION']['logado']) {
-              echo "
-              <div id='p-login'></div>
-              <button class='bg-gray-200 dark:bg-gray-900 dark:text-white p-2 rounded flex flex-row gap-2 items-center'>Olá, " . $usuario[0]['nome'] . "<br/><a href='./php/deslogar.php' class=' px-2 py-1 text-white bg-red-600 rounded-md hover:underline'>Deslogar</a></button>" . PHP_EOL;
+
+            if(!empty($_SESSION['ARTESDB_SESSION'])) {
+
+              if($_SESSION['ARTESDB_SESSION']['logado']) {
+                echo "
+                <div id='p-login'></div>
+                <button class='bg-gray-200 dark:bg-gray-900 dark:text-white p-2 rounded flex flex-row gap-2 items-center'>Olá, " . $usuario[0]['nome'] . "<br/><a href='./php/deslogar.php' class=' px-2 py-1 text-white bg-red-600 rounded-md hover:underline'>Deslogar</a></button>" . PHP_EOL;
+              }
             }
             ?>
             <i class=" trocartema !flex items-center fa-solid fa-sun fa-xl px-5 text-sky-900 align-middle rounded cursor-pointer dark:text-white" onclick="javascript:trocarTema();"></i>

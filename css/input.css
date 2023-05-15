@@ -26,4 +26,9 @@
     line-height: inherit !important;
 }
 
+button:focus {
+    display: none !important;
+}
+
+
 
