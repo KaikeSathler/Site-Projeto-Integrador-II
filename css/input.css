@@ -1,34 +1,131 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: "foods";
+  src: url(../fonts/Super\ Foods.ttf);
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
 }
 
 #button_login_page {
-    border: 2px solid rgb(199, 199, 199) !important;
+  border: 2px solid rgb(199, 199, 199) !important;
 }
 
 #button_login_page:hover {
-    background-color: rgb(199, 199, 199)!important;
+  background-color: rgb(199, 199, 199) !important;
 }
 .offcanvas-body.offCanvas_fechado {
-    transform: translateX(48rem);
+  transform: translateX(48rem);
 }
 
 .offcanvas-body:not(.offCanvas_fechado) {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
-.fa, .fa-solid {
-    line-height: inherit !important;
+.fa,
+.fa-solid {
+  line-height: inherit !important;
 }
 
 button:focus {
-    display: none !important;
+  display: none !important;
+}
+
+a {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.off-canvas-container a {
+  border-bottom: 1px solid #fff !important;
+  padding: 1rem;
+  padding-right: 4rem !important;
+}
+
+.titulo {
+  font-family: "Arial", sans-serif;
+  color: rgb(129, 212, 245);
+}
+
+#home-image {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/image_home.jpg);
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+   backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+#home-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.home-container {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 364px) {
+  .titulo {
+    font-size: 43px !important;
+  }
+
+  .frase {
+    font-size: 20px !important;
+  }
+
+  .button-header {
+    width: 7rem !important;
+    height: 3rem !important;
+    font-size: 14px !important;
+  }
+}
+
+.animacao-aparecer {
+  animation-name: animacao-aparecer;
+  animation-duration: 800ms;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animacao-aparecer {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
-
+.image-line {
+    background-image: url(../img/kaie.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+}

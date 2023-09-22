@@ -1,19 +1,65 @@
+<?php
+session_start();
+
+use App\GoogleClientConnection as GoogleClientConnection;
+use App\Conexao as Conexao;
+
+require_once '../vendor/autoload.php';
+
+$google_client = (new GoogleClientConnection())->getConnection();
+$google_client->setRedirectUri("http://localhost/php/login.php");
+
+$erroEmail = false;
+$erroSenha = false;
+
+if(isset($_POST['email'])) {
+  $conexao = new Conexao();
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
+  $usuario = $conexao->buscarUsuario($email);
+  if(!empty($usuario)) {
+    if($usuario['senha'] !== $senha) {
+      $erroSenha = true;
+    }
+  } else {
+    $erroEmail = true;
+  }
+}
+
+if (isset($_GET['emailIncorreto'])) {
+  $erroEmail = true;
+}
+
+
+if(!$erroEmail && !$erroSenha && !empty($usuario)) {
+  $_SESSION['ARTESDB_SESSION'] = serialize($usuario);
+  header("Location: ../");
+  exit();
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Artes Visuais I - Login</title>
     <link rel="stylesheet" href="../css/input.css" />
+    <link rel="shortcut icon" href="../img/icon/icob.png" type="image/x-icon">
     <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body style="background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)">
-    <section class="min-h-screen flex items-center justify-center">
+  
+    <section class="min-h-screen flex items-center justify-center flex-col">
+    <button class="mb-4 hover:scale-125 duration-300"><a href="../"><i class="fa-solid fa-right-from-bracket fa-rotate-180 fa-lg text-[#002D74] hover:text-[#0947ac] duration-300" fa-xl"></i></a></button>
       <div
         class="bg-white/80 backdrop-blur flex rounded-2xl max-w-3xl p-5 shadow-xl items-center"
       >
@@ -23,7 +69,7 @@
           </h2>
           <p class="text-xs mt-4 text-[#002D74]"></p>
           <form
-            action="/php/login.php"
+            action="../php/login.php"
             class="flex flex-col gap-4"
             aria-required="false"
             method="POST"
@@ -34,13 +80,16 @@
                 type="email"
                 name="email"
                 placeholder="Email"
+                required
               />
+              <?php if($erroEmail) { ?>
               <div
-                class="text-red-900 bg-red-300 p-2 rounded mt-2 hidden"
+                class="text-red-900 bg-red-300 p-2 rounded mt-2"
                 id="erroEmail"
               >
-                * Erro email.
+                * Este e-mail não existe.
               </div>
+              <?php } ?>
             </div>
             <div class="relative">
               <input
@@ -48,29 +97,32 @@
                 type="password"
                 name="senha"
                 placeholder="Senha"
+                required
               />
+              <?php if(isset($_GET['senhaIncorreta'])) { ?>
               <div
-                class="text-red-900 bg-red-300 p-2 rounded mt-2 hidden"
+                class="text-red-900 bg-red-300 p-2 rounded mt-2"
                 id="erroSenha"
               >
-                * Erro senha.
+                * Senha inválida.
               </div>
+              <?php } ?>
               <div
-                class="w-full text-xs border-b border-gray-400 py-4 text-[#002D74]"
+                class="w-full text-xs border-b border-gray-400 py-4 text-[#002D74] hover:underline"
               >
                 <a class="text-sm text-right block" href="#"
                   >Esqueceu sua senha?</a
                 >
               </div>
             </div>
-            <button
-              class="bg-[#002D74] rounded-lg hover:bg-[#0947ac]  text-white py-2 hover:scale-105 duration-300"
+            <input type="submit" value="logar"
+              class=" cursor-pointer bg-[#002D74] rounded-lg hover:bg-[#0947ac]  text-white py-2 hover:scale-105 duration-300"
             >
-              Login
-            </button>
+              
+            </input>
             <div class="mt-5 text-center text-xs text-[#002D74]">
-              <a class="text-sm" href="#"
-                >Não possui uma conta?<a href="./registrar.html" class="text-sm font-bold px-2"
+              <a class="text-sm"
+                >Não possui uma conta?<a href="./registrar.html" class="text-sm font-bold px-2 hover:underline"
                   >Registre-se</a
                 ></a
               >
@@ -81,18 +133,11 @@
             <p class="text-center text-sm">OU</p>
             <hr class="border-gray-400" />
           </div>
-          <button
-            class="bg-white border hover:ring-2 py-2 w-full rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]"
-          >
-            <img class="w-9" src="../img/icon/logo_google_icon.png" alt="" />
-            Login com Google
-          </button>
-          <button
-            class="bg-white hover:ring-2 border py-2 w-full rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]"
-          >
-            <img class="w-9" src="../img/icon/GitHub-Mark.png" alt="" />
-            Login com Github
-          </button>
+          <?php echo "<a href='" . $google_client->createAuthUrl() . "'> <button
+            class='bg-white border hover:ring-2 py-2 w-full rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]'
+          ><img class='w-9' src='../img/icon/logo_google_icon.png' />Login com Google</button></a>" . 
+           PHP_EOL ;
+          ?>
         </div>
       </div>
     </section>
