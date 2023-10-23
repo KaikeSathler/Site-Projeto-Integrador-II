@@ -88,6 +88,29 @@ function aparecerTitulo() {
   }
 }
 
-window.onload = () => {
-  aparecerTitulo();
-};
+aparecerTitulo();
+
+var tamanhoFraseAtual = 0;
+var timerEscreverFrase;
+var tamanhoFinal =
+  document.querySelectorAll(".frase")[0].textContent.length;
+  var texto = document.querySelectorAll(".frase")[0].textContent;
+
+async function escreverFrase() {
+  if (tamanhoFraseAtual > tamanhoFinal) {
+    clearInterval(timerEscreverFrase);
+    return;
+  }
+
+  if (tamanhoFraseAtual == 0) {
+    document.querySelectorAll(".frase")[0].textContent = "";
+  } else {
+    document.querySelectorAll(".frase")[0].textContent +=
+      texto.charAt(tamanhoFraseAtual-1);
+  }
+  console.log(tamanhoFraseAtual, tamanhoFinal)
+  tamanhoFraseAtual++;
+}
+
+timerEscreverFrase = setInterval(escreverFrase, 50);
+console.log(document.querySelectorAll(".frase")[0].textContent);

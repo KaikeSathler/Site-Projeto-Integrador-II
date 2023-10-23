@@ -6,8 +6,8 @@ use PDO;
 class Conexao
 {
     private $ip = "localhost";
-    private $usuario = "kaike";
-    private $senha = "kaike123";
+    private $usuario = "root";
+    private $senha = "";
     private $conexao;
 
     public function __construct()
@@ -42,6 +42,7 @@ class Conexao
             $query = $this->conexao->prepare("INSERT INTO `usuarios` (email,senha,nome,sobrenome,oauth_provider,oauth_googleid) VALUES (?,?,?,?,?,?);");
             $query->bindParam(6, $oauth_googleid);
         }
+        $query = $this->conexao->prepare("INSERT INTO `usuarios` (email,senha,nome,sobrenome,oauth_provider) VALUES (?,?,?,?,?);");
         $query->bindParam(1, $_email);
         $query->bindParam(2, $_senha);
         $query->bindParam(3, $_nome);
