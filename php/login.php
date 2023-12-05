@@ -37,6 +37,7 @@ if (isset($_GET['code'])) {
         }
         // Guarda o ID da conta do Google e o nome do usuário em uma sessão.
         $_SESSION['google_name'] = $data['name'];
+        $_SESSION['google_email'] = $data['email'];
         $_SESSION['google_id'] = $data['id'];
         $_SESSION['google_picture'] = $data['picture'];
         // Redireciona para o index

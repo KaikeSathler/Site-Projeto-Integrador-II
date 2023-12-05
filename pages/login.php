@@ -122,7 +122,7 @@ if(!$erroEmail && !$erroSenha && !empty($usuario)) {
             </input>
             <div class="mt-5 text-center text-xs text-[#002D74]">
               <a class="text-sm"
-                >Não possui uma conta?<a href="./registrar.html" class="text-sm font-bold px-2 hover:underline"
+                >Não possui uma conta?<a href="./registrar.php" class="text-sm font-bold px-2 hover:underline"
                   >Registre-se</a
                 ></a
               >
@@ -133,9 +133,9 @@ if(!$erroEmail && !$erroSenha && !empty($usuario)) {
             <p class="text-center text-sm">OU</p>
             <hr class="border-gray-400" />
           </div>
-          <?php echo "<a href='" . $google_client->createAuthUrl() . "'> <button
-            class='bg-white border hover:ring-2 py-2 w-full rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]'
-          ><img class='w-9' src='../img/icon/logo_google_icon.png' />Login com Google</button></a>" . 
+          <?php echo "<button
+            class='m-auto py-2 px-4 bg-white border hover:ring-2 rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]' onclick='mudarPagina()'
+          ><img class='w-9' src='../img/icon/logo_google_icon.png' /><a class='w-full' href='" . $google_client->createAuthUrl() . "'>Login com Google</a></button>" . 
            PHP_EOL ;
           ?>
         </div>
@@ -144,9 +144,12 @@ if(!$erroEmail && !$erroSenha && !empty($usuario)) {
   </body>
 
   <script>
+    function mudarPagina() {
+      window.location.href = "<?php echo $google_client->createAuthUrl(); ?>"
+    }
     let formulario = document.querySelector("form");
 
-    let regex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    let regex = new RegExp(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]+$/gi);
     let regex2 = new RegExp(/[$&+,:;=?@#|'<>.^*()%!-]/);
 
     let campoEmail = formulario.elements[0];

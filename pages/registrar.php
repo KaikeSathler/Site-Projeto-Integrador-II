@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+use App\GoogleClientConnection as GoogleClientConnection;
+
+require_once '../vendor/autoload.php';
+
+$google_client = (new GoogleClientConnection())->getConnection();
+$google_client->setRedirectUri("http://localhost/php/login.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,12 +57,26 @@
           <p class="text-center text-sm">OU</p>
           <hr class="border-gray-400">
         </div>
-        <button class="bg-white border hover:ring-2 py-2 w-full rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]">
-          <img class="w-9" src="../img/icon/logo_google_icon.png">
-          Login com Google
-        </button>
+        <?php echo "<button
+        class='m-auto py-2 px-4 bg-white border hover:ring-2 rounded-xl mt-5 flex gap-2 justify-center items-center text-sm hover:scale-105 duration-300 text-[#002D74]' onclick='mudarPagina()'
+      ><img class='w-9' src='../img/icon/logo_google_icon.png' /><a class='w-full' href='" . $google_client->createAuthUrl() . "'>Login com Google</a></button>" . 
+       PHP_EOL ;
+      ?>
       </div>
     </div>
   </section>
+  <script>
+    let formulario = document.querySelector("form");
+    let regex = new RegExp(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z]+$/gi);
+    let campoEmail = formulario.elements['email'];
+
+    campoEmail.addEventListener("input", function (e) {
+        if (!regex.test(e.target.value)) {
+          e.target.classList.add("border-red-500");
+        } else {
+          e.target.classList.remove("border-red-500");
+        }
+      });
+      </script>
 </body>
 </html>

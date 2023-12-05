@@ -1,0 +1,111 @@
+{
+    "quiz": [
+      {
+        "pergunta": "Quem foi o artista responsável pela pintura da **Mona Lisa**?",
+        "imagem": "mona-lisa.jpg",
+        "alternativas": [
+          {
+            "opcao": "Leonardo da Vinci",
+            "correta": true
+          },
+          {
+            "opcao": "Vincent van Gogh",
+            "correta": false
+          },
+          {
+            "opcao": "Pablo Picasso",
+            "correta": false
+          },
+          {
+            "opcao": "Salvador Dalí",
+            "correta": false
+          }
+        ]
+      },
+      {
+        "pergunta": "Qual o nome da pintura que retrata a **Última Ceia** de Jesus Cristo?",
+        "alternativas": [
+          {
+            "opcao": "A Última Ceia",
+            "correta": true
+          },
+          {
+            "opcao": "O Nascimento de Vênus",
+            "correta": false
+          },
+          {
+            "opcao": "Guernica",
+            "correta": false
+          },
+          {
+            "opcao": "A Persistência da Memória",
+            "correta": false
+          }
+        ]
+      },
+      {
+        "pergunta": "Qual o movimento artístico que foi marcado pela **revalorização da cultura clássica greco-romana**?",
+        "alternativas": [
+          {
+            "opcao": "Renascimento",
+            "correta": true
+          },
+          {
+            "opcao": "Barroco",
+            "correta": false
+          },
+          {
+            "opcao": "Romantismo",
+            "correta": false
+          },
+          {
+            "opcao": "Realismo",
+            "correta": false
+          }
+        ]
+      },
+      {
+        "pergunta": "Qual o nome da pintura que retrata a **deusa Vênus emergindo do mar**?",
+        "alternativas": [
+          {
+            "opcao": "A Última Ceia",
+            "correta": false
+          },
+          {
+            "opcao": "O Nascimento de Vênus",
+            "correta": true
+          },
+          {
+            "opcao": "Guernica",
+            "correta": false
+          },
+          {
+            "opcao": "A Persistência da Memória",
+            "correta": false
+          }
+        ]
+      },
+      {
+        "pergunta": "Qual o nome da pintura que retrata a **guerra civil espanhola**?",
+        "alternativas": [
+          {
+            "opcao": "A Última Ceia",
+            "correta": false
+          },
+          {
+            "opcao": "O Nascimento de Vênus",
+            "correta": false
+          },
+          {
+            "opcao": "Guernica",
+            "correta": true
+          },
+          {
+            "opcao": "A Persistência da Memória",
+            "correta": false
+          }
+        ]
+      }
+    ]
+  }
+  

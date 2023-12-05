@@ -4,7 +4,7 @@
           <li><img id="iconv" src="/img/icon/icob.png" width="48" class="  select-none "></li>
           <li><a class=" title_icon_container !font-mono text-2xl text-sky-900 dark:text-white">Visuais I</a></li>
         </div>
-        <div class="flex gap-2 items-center">
+        <div class="flex gap-3 items-center">
           <?php
           if (!empty($_SESSION['ARTESDB_SESSION']) || !empty($_SESSION['google_id'])) {
             if(isset($_SESSION['google_id'])) {
@@ -12,13 +12,13 @@
               echo " <div id='p-login'> " . (isset($_SESSION['google_picture']) ? ("<img class='select-none ' src='$imagem' style=' border-radius: 100%; width: 2.5rem; margin-right: 0.30rem;'/>") : "") . "
                   </div>
                     <div
-                   class=' name_google select-none text-sky-900 dark:text-white pr-16 text-center'>Olá, " . (isset($_SESSION['google_id']) ? $_SESSION['google_name'] : "") . PHP_EOL;
+                   class=' name_google select-none text-sky-900 border-none sm:border-solid sm:border-r-2 dark:text-white pr-15 sm:pr-12 text-center dark:border-white sm:border-sky-900'>Olá, " . (isset($_SESSION['google_id']) ? $_SESSION['google_name'] : "") . PHP_EOL;
 
             } else if(isset($_SESSION['ARTESDB_SESSION'])) {
               $sessionDetails = unserialize($_SESSION['ARTESDB_SESSION']);
               echo " <div id='p-login'>
                   </div>
-                  <div class=' name_google  dark:text-white pr-16'>Olá, " . (isset($sessionDetails['nome']) ? $sessionDetails['nome'] : "") . PHP_EOL;
+                  <div class=' name_google  dark:text-white pr-16 sm:pr-12'>Olá, " . (isset($sessionDetails['nome']) ? $sessionDetails['nome'] : "") . PHP_EOL;
             }
           }
           ?>

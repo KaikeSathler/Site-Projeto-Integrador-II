@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 @font-face {
   font-family: "foods";
   src: url(../fonts/Super\ Foods.ttf);
@@ -5,7 +7,8 @@
 
 @font-face {
   font-family: "line";
-  src: url(../fonts/Oxymorons\ Bold.otf);
+  src: url(../fonts/LoveRegular.ttf);
+  font-weight: 400;
 }
 
 @font-face {
@@ -16,10 +19,9 @@
 body,
 html {
   overflow-x: hidden;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
   font-family: "Raleway", sans-serif;
@@ -54,10 +56,14 @@ a {
   font-family: "Open Sans", sans-serif !important;
 }
 
-.off-canvas-container a {
+.off-canvas-container a, .off-canvas-container button {
   border-bottom: 1px solid #fff !important;
   padding: 1rem;
   padding-right: 4rem !important;
+}
+
+#dropdownHover a{
+  border-bottom: 1px solid #ffffff00 !important;
 }
 
 .titulo {
@@ -95,6 +101,7 @@ a {
   position: relative;
   z-index: 1;
 }
+
 
 
 
@@ -142,6 +149,7 @@ a {
 }
 
 
+
 .title_texture {
   font-family: "texture";
 }
@@ -150,7 +158,7 @@ a {
   font-family:"line" ;
 }
 
-@media only screen and (max-width :534px) {
+@media only screen and (max-width :594px) {
   .title_icon_container {
     display : none!important;
   }
@@ -160,6 +168,7 @@ a {
 @media only screen and (max-width :386px) {
   .name_google {
     display : none!important;
+    padding-right: 1rem !important;
   }
   
 }
@@ -194,4 +203,42 @@ a {
   100% {
     background-position: left;
   }
+}
+
+
+.list-offcanvas a:hover, .list-offcanvas button:hover {
+  background-color: rgb(31 41 55);
+}
+
+#button-scroll {
+  display: none;
+}
+
+#button-scroll.visivel {
+  display: block !important;
+}
+
+.home-paint {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/van.webp);
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+   backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+
+.home-paint::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  filter: brightness(0.7);
+  z-index: -1;
 }
