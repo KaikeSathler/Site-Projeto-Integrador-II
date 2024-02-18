@@ -1,7 +1,7 @@
-<span style="font-family: 'Times New Roman', serif; font-size: 2em;"><img src="img/icon/icob.png" width="24px"> Artes Visuais I</span>
-
 ![GitHub repo size](https://img.shields.io/github/repo-size/kaikesathler/Site-Projeto-Integrador-II?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/kaikesathler/Site-Projeto-Integrador-II?style=for-the-badge)
+
+<span style="font-family: 'Times New Roman', serif; font-size: 2em;"><img src="img/icon/icob.png" width="24px"> Artes Visuais I</span>
 
 <img src="img/image_home.jpg" alt="Exemplo imagem">
 
