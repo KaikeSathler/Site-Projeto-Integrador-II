@@ -7,16 +7,6 @@
 
 > Imagem ilustrativa pintada por Van Gogh
 
-### Ajustes e melhorias
-
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
-
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
-
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
@@ -25,7 +15,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/104788755" width="100px;" alt="Foto do Kaike no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/104788755" width="100px;"/><br>
         <sub>
           <b>Kaike Sathler</b>
         </sub>
@@ -33,7 +23,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://image-aws-us-west-2.vsco.co/derivative/652488118b5c6a03df000003?h=639&w=480" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg?w=740" width="100px;"/><br>
         <sub>
           <b>Kauã Rossanezi</b>
         </sub>
