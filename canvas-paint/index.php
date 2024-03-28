@@ -62,7 +62,7 @@ if (isset($_SESSION['google_id']) || isset($_SESSION['ARTESDB_SESSION'])) {
         <div id="canvas-editor" style="position: relative; top: 3rem ">
         </div>
             </div>
-    <script></script>
+    <script>
         $(document).ready(function () {
             var drawerPlugins = [
                 "Pencil",
