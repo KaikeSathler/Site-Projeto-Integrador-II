@@ -1,5 +1,157 @@
-[
-  [
+{
+  "0": [
+    {
+      "pergunta": "A rachadura de um vidro, faz parte de qual classificação de linhas?",
+      "alternativas": [
+        { "opcao": "Sensorial", "correta": false },
+        { "opcao": "Regular", "correta": false },
+        { "opcao": "Físicas", "correta": true },
+        { "opcao": " Geométrica Gráfica", "correta": false }
+      ]
+    },
+    {
+      "pergunta": "Qual desses NÃO faz parte do grupo de texturas regulares?",
+      "alternativas": [
+        { "opcao": "Azulejos", "correta": false },
+        { "opcao": " Casca de árvores", "correta": true },
+        { "opcao": "Telha", "correta": false },
+        { "opcao": "Planície", "correta": false }
+      ]
+    },
+    {
+      "pergunta": "Em qual época ocorreu a arte contemporânea?",
+      "alternativas": [
+        { "opcao": " 500 D.C.", "correta": false },
+        { "opcao": "200 A.C.", "correta": false },
+        { "opcao": "Década de 60", "correta": true },
+        { "opcao": " Durante o holocausto", "correta": false }
+      ]
+    },
+    {
+      "pergunta": "A imagem está representado qual tipo de linha?",
+      "imagem": "pont.avif",
+      "alternativas": [
+        { "opcao": "Linhas pontilhadas.", "correta": true },
+        { "opcao": "Linhas quebradas.", "correta": false },
+        { "opcao": "Linhas Retas.", "correta": false },
+        { "opcao": "Linhas Curvas.", "correta": false }
+      ]
+    },
+    {
+      "pergunta": "Se violeta é uma cor quente, misturada com azul, qual cor ela se torna?",
+      "alternativas": [
+        { "opcao": "Roxo", "correta": true },
+        { "opcao": "Violeta não é uma cor quente.", "correta": false },
+        { "opcao": "Verde.", "correta": false },
+        { "opcao": "Marrom.", "correta": false }
+      ]
+    },
+    {
+      "pergunta": "Qual a principal característica da arte renascentista?",
+      "alternativas": [
+        {
+          "opcao": "Dava ênfase na realidade proporcional da figura humana",
+          "correta": true
+        },
+        {
+          "opcao": "Tinha foco em pinturas reais da revolução industrial.",
+          "correta": false
+        },
+        {
+          "opcao": "Durante o Renascimento, os artistas evitavam representar a figura humana realista e buscavam criar obras abstratas e simbólicas, afastando-se completamente das técnicas de perspectiva e anatomia.",
+          "correta": false
+        },
+        {
+          "opcao": "O renascimento tem foco no nascimento e ressurreição de Jesus.",
+          "correta": false
+        }
+      ]
+    },
+
+    {
+      "pergunta": "Qual a definição de cores primárias?",
+      "alternativas": [
+        {
+          "opcao": "As cores primárias são aquelas que podem ser obtidas apenas pela mistura de outras cores.",
+          "correta": true
+        },
+        {
+          "opcao": "Cores primárias são as cores existentes no arco-íris.",
+          "correta": false
+        },
+        {
+          "opcao": "As cores secundárias são aquelas que não podem ser obtidas pela mistura de outras cores.",
+          "correta": false
+        },
+        {
+          "opcao": "As cores primárias são aquelas que não podem ser obtidas pela mistura de outras cores.",
+          "correta": true
+        }
+      ]
+    },
+
+    {
+      "pergunta": "Aproximação da linguagem popular e coloquial faz parte de qual momento da arte?",
+      "alternativas": [
+        { "opcao": "Arte Contemporânea", "correta": false },
+        { "opcao": "Arte Clássica", "correta": false },
+        { "opcao": "Arte Moderna", "correta": true },
+        { "opcao": "Arte Renascentista.", "correta": false }
+      ]
+    },
+
+    {
+      "pergunta": "Quem foi pioneiro do movimento impressionista? o que ele explorou?",
+      "alternativas": [
+        { "opcao": "Monteiro Lobato", "correta": false },
+        { "opcao": "Monet", "correta": true },
+        { "opcao": "Alan Turing", "correta": false },
+        { "opcao": "Van gogh", "correta": false }
+      ]
+    },
+
+    {
+      "pergunta": "Assinale a alternativa incorreta sobre cores",
+      "alternativas": [
+        {
+          "opcao": "As cores podem ser influenciadoras psicológicas nos seres humanos, podem ser estimulantes ou tranquilizantes.",
+          "correta": false
+        },
+        {
+          "opcao": "Cor é a impressão que a luz refletida ou absorvida pelos corpos produz nos olhos. ",
+          "correta": false
+        },
+        { "opcao": "as cores são fenômenos visuais resultantes da forma como os olhos percebem a luz eletromagnética de diferentes comprimentos de onda.", "correta": false },
+        { "opcao": "As cores não podem ter efeitos psicológicos ou de emoção, por exemplo emoções/comparações.", "correta": true }
+      ]
+    },
+
+    {
+      "pergunta": "Ao longo do tempo, a releitura de obras de arte permite",
+      "alternativas": [
+        { "opcao": "Pode se tornar plágio", "correta": false },
+        {
+          "opcao": "Pode trazer uma melhor apreciação/entendimento da obra e seu contexto histórico ",
+          "correta": true
+        },
+        {
+          "opcao": "Pode ajudar na evolução de novos artistas, lembrando de suas origens",
+          "correta": false
+        },
+        { "opcao": "Nenhuma das alternativas está correta", "correta": false }
+      ]
+    },
+    {
+      "pergunta": "Qual desses não é arte?",
+      "alternativas": [
+        { "opcao": "Cinema", "correta": false },
+        { "opcao": "Música", "correta": false },
+        { "opcao": "Artesanato", "correta": false },
+        { "opcao": "Nenhuma das alternativas está correta", "correta": true }
+      ]
+    }
+  ],
+  "1": [
     {
       "pergunta": "Quem pintou a Mona Lisa?",
       "imagem": "mona-lisa.jpg",
@@ -56,7 +208,7 @@
       ]
     }
   ],
-  [
+  "2": [
     {
       "pergunta": "Quem foi o artista responsável pela pintura da **Mona Lisa**?",
       "imagem": "mona-lisa.jpg",
@@ -164,4 +316,4 @@
       ]
     }
   ]
-]
+}

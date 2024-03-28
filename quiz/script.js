@@ -33,7 +33,7 @@ $.getJSON("/data/quizzes.json", function (listQuizzes) { // Função da bibliote
   function nextQuestion() {
     const selectedOption = document.querySelector('input[name="opcao"]:checked'); // Obtém a opção selecionada pelo usuário
     if (selectedOption) {
-      imagemElement.remove()
+      if(imagemElement !== null) imagemElement.remove()
       const selectedOptionIndex = parseInt(selectedOption.value); // Obtém o índice da opção selecionada
       const currentQuestionData = quizData[currentQuestion]; // Obtém os dados da pergunta atual do arquivo JSON
       if (currentQuestionData.alternativas[selectedOptionIndex].correta) {

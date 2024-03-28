@@ -67,9 +67,9 @@ if (!session_id()) {
         </section>
         <script async src="./script.js"></script>
         <?php } else { ?>
-        <h1 class="border-2 bg-red-700 p-2 text-red-100 rounded-md w-1/2 m-auto mt-6"> * Erro! Você prescisa estar
+        <h1 class="border-2 bg-red-700 p-2 text-red-100 rounded-md w-1/2 m-auto mt-5"> * Erro! Você prescisa estar
             cadastrado para responder o Quiz</h1>
-        <button class=" m-auto table mt-10 text-white hover:opacity-80"><a href="../pages/login.php"
+        <button class=" m-auto table mt-5 text-white hover:opacity-80"><a href="../pages/login.php"
                 class="bg-sky-500 p-3 rounded flex items-center gap-1"><span class="material-symbols-outlined">
                     login
                 </span>Acesse sua conta</a></button>

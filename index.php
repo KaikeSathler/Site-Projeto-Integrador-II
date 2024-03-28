@@ -80,7 +80,7 @@ if (!empty($_SESSION["ARTESDB_SESSION"])) {
                 <li class=" list-offcanvas flex flex-col bg-gray-900"></li>
                 <a href="#title_container" class="hover:bg-gray-800"><i class="fa-solid fa-comments pr-2"
                         style="color: #ffffff;"></i>Conteúdos</a>
-                <a href="#quiz" class="flex gap-1.5 hover:bg-gray-800""><span class=" material-symbols-outlined">
+                <a href="#quizz-text" class="flex gap-1.5 hover:bg-gray-800""><span class=" material-symbols-outlined">
                     quiz
                     </span>Quizzes</a>
                 <a href="#home-paint" class="flex gap-1.5 hover:bg-gray-800""><span class=" material-symbols-outlined">
@@ -133,89 +133,10 @@ dark:text-slate-300 md:text-8xl p-1 py-9 transition-all ease-in duration-150
 
             </div>
         </div>
-        <div class="image-line xl:block hidden">
-            <img src="./img/Image_line.jpg" alt="">
-        </div>
-        <ol class=" content relative border-l m-10 sm:ml-16 sm:mt-16 border-sky-200 dark:border-gray-700">
-            <h1 id="title_container"
-                class="sm:text-5xl text-4
-xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-300 dark:text-gray-200">
-                Conteúdos
-            </h1>
-            <li class="mb-10 ml-4">
-                <div
-                    class="absolute w-3 h-3 bg-sky-200 rounded-full mt-5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                </div>
-                <h3 class="text-3xl font-semibold text-gray-900 dark:text-white py-3 w-1/5">
-                    Arte</h3>
-                <p class="font-medium text-lg text-gray-500 dark:text-gray-400">O que é Arte;
-                    <br>
-                    Como são identificados;
-                    <br>
-                    Arte Cronológica.
-                    <br>
-                <div class="pl-4 font-medium text-lg text-gray-500 dark:text-gray-400">
-                    <span class="material-symbols-outlined">
-                        subdirectory_arrow_right
-                    </span>Clássica;
-                    <br>
-                    <span class="material-symbols-outlined">
-                        subdirectory_arrow_right
-                    </span>Moderna;
-                    <br>
-                    <span class="material-symbols-outlined">
-                        subdirectory_arrow_right
-                    </span>Contemporânea;
-                    <br>
-                    <span class="material-symbols-outlined">
-                        subdirectory_arrow_right
-                    </span>Renascentista.
-                </div>
-                </p>
-            </li>
-            <li class=" mb-10 ml-4">
-                <div
-                    class="absolute w-3 h-3 bg-sky-200 rounded-full mt-5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                </div>
-                <h3 class="text-3xl font-semibold text-gray-900 dark:text-white py-3 w-1/5">
-                    Linhas</h3>
-                <p class="mb-4 text-lg font-medium text-gray-500 dark:text-gray-400">O que são linhas e quais são elas.
-                </p>
-            </li>
-            <li class="mb-10 ml-4">
-                <div
-                    class="absolute w-3 h-3 bg-sky-200 rounded-full mt-5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                </div>
-                <h3 class="title_texture text-3xl text-gray-900 dark:text-white py-3 w-1/5">Texturas</h3>
-                <p class="font-medium text-lg text-gray-500 dark:text-gray-400">O que são;<br>Como são
-                    identificados.<br></p>
-            </li>
-            <li class="mb-10 ml-4">
-                <div
-                    class="absolute w-3 h-3 bg-sky-200 rounded-full mt-5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                </div>
-                <h3 class="text-3xl font-semibold text-gray-900 dark:text-white py-3 sm:w-1/2">Releitura de Obras de
-                    Arte</h3>
-                <p class="font-medium text-lg text-gray-500 dark:text-gray-400">Leitura racional;<br>leitura
-                    sensorial;<br>Leitura Emocional.</p>
-                <p class="font-medium text-lg text-gray-500 dark:text-gray-400 pl-4"><span
-                        class="material-symbols-outlined">
-                        subdirectory_arrow_right
-                    </span>Recriação de obras de arte.</p>
-            <li class="mb-10 ml-4">
-                <div
-                    class="absolute w-3 h-3 bg-sky-200 rounded-full mt-5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                </div>
-                <h3
-                    class=" font-bold text-3xl text-gray-900 dark:text-white py-3 w-1/4 hover:scale-110 hover:translate-x-[5%] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-red-400 to-green-500 bg-[length:200%_150%] cursor-pointer transition animation-gradient">
-                    Cores</h3>
-                <p class="font-medium text-lg text-gray-500 dark:text-gray-400">Cores primárias;<br>Cores
-                    Secundárias;<br>Cores Terciárias;<br>Cores frias;<br>Cores quentes.</p>
-            </li>
-        </ol>
-        <section id="off-canva-arte" class="bg-green-500 w-full h-auto">
+        <section>
+        <div id="off-canva-arte" class="bg-green-500 w-full h-auto">
             <div
-                class="section-arte-content text-justify gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
+                class="section-arte-content text-justify gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-neutral-200">
                 <h1
                     class=" text-center justify-center sm:justify-start sm:text-start text-emerald-950 sm:text-7xl text-5xl font-bold p-0 sm:p-6">
                     Arte</h1>
@@ -236,8 +157,8 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                     está dividida em duas principais formas de arte, a arte clássica e moderna.
                 </p>
             </div>
-        </section>
-        <section class="bg-emerald-500 w-full h-auto">
+        </div>
+        <div class="bg-emerald-500 w-full h-auto">
             <div
                 class="section-arte-content text-justify sm:items-start items-center gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
                 <h1
@@ -255,9 +176,9 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                 </p>
 
             </div>
-        </section>
         </div>
-        <section class="bg-teal-500 w-full h-auto">
+        </div>
+        <div class="bg-teal-500 w-full h-auto">
             <div
                 class="section-arte-content text-justify sm:items-start items-center gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
                 <h1
@@ -284,7 +205,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                     guerra mundial.
                 </p>
             </div>
-        </section>
+        </div>
         <div class="p-4 flex flex-col md:flex-row gap-5 m-4">
             <div class="flex-col flex p-6 gap-6 ">
                 <h1
@@ -301,7 +222,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
             <img class="w-full md:w-80 md:h-96" src="./img/relogio.jpeg" alt="">
         </div>
         </div>
-        <section class="bg-yellow-500 w-full h-auto">
+        <div class="bg-yellow-500 w-full h-auto">
             <div
                 class="section-arte-content text-justify sm:items-start items-center gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
                 <h1
@@ -318,7 +239,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                     inicia a arte digital, da fotografia, arte urbana, body arte e muitos outros…
                 </p>
             </div>
-        </section>
+        </div>
         <div class="p-4 flex flex-col md:flex-row gap-5 m-4">
             <img class="w-full md:w-80" src="./img/conte1.webp" alt="">
             <img class="w-full md:w-80" src="./img/romero.webp" alt="">
@@ -334,7 +255,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
             </div>
         </div>
         </div>
-        <section class="bg-amber-500 w-full h-auto">
+        <div class="bg-amber-500 w-full h-auto">
             <div
                 class="section-arte-content text-justify sm:items-start items-center gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
                 <h1
@@ -357,7 +278,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                     impregnada da visão de mundo de quem deixou o registro.
                 </p>
             </div>
-        </section>
+        </div>
         <div class="p-4 flex flex-col md:flex-row gap-5 mb-10 m-4">
             <div class="flex-col flex p-0 sm:p-6 gap-6 ">
                 <h1
@@ -385,7 +306,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
             </figcaption>
         </figcaption>
         <hr class="m-10">
-        <section id="off-canva-linha" class="bg-slate-500 w-full h-auto">
+        <div id="off-canva-linha" class="bg-slate-500 w-full h-auto">
             <div
                 class="section-arte-content text-justify sm:items-start items-center gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
                 <h1
@@ -417,7 +338,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                     seguimos para uma direção.
                 </p>
             </div>
-        </section>
+        </div>
         <div class="p-4 flex flex-col md:flex-row gap-5 mb-10 m-4">
             <div class="flex-col flex p-0 sm:p-6 gap-6 ">
                 <h1
@@ -457,7 +378,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
             </figcaption>
         </figcaption>
         <hr class="m-10">
-        <section id="off-canva-textura" class="bg-sky-500 w-full h-auto">
+        <div id="off-canva-textura" class="bg-sky-500 w-full h-auto">
             <div
                 class="section-arte-content text-justify sm:items-start items-center gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
                 <h1
@@ -487,7 +408,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
 
                 </P>
             </div>
-        </section>
+        </div>
         <div class="flex flex-col md:flex-row gap-5 mb-10 m-4 p-4">
             <div class="flex-col flex gap-6 p-4 ">
                 <h1
@@ -524,7 +445,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
             </figcaption>
         </figcaption>
         <hr class="m-10">
-        <section style="background-color: #e3c374;" class="bg-sky-500 w-full h-auto">
+        <div style="background-color: #e3c374;" class="bg-sky-500 w-full h-auto">
             <div style="color: #453b22;"
                 class="section-arte-content  text-justify gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
                 <h1 style="color: #453b22;"
@@ -554,7 +475,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                     ruim, até mesmo imaginar e imaginar sem parar de pensar.
                 </P>
             </div>
-        </section>
+        </div>
         <div class="flex flex-col md:flex-row gap-5 mb-10 m-4 p-4">
             <div class="flex-col flex gap-6 p-4 ">
                 <h1 style="color: #453b22;"
@@ -590,7 +511,7 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
             </figcaption>
         </figcaption>
         <hr class="m-10">
-        <section id="off-canva-cores" class="bg-red-500 w-full h-auto">
+        <div id="off-canva-cores" class="bg-red-500 w-full h-auto">
             <div
                 class="section-arte-content text-justify sm:items-start items-center gap-6 flex p-12 pt-8 flex-col sm:text-xl text-lg text-gray-200">
                 <h1
@@ -604,13 +525,13 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                     ausência de cor ou de luz. As cores são divididas em vários grupos e alguns deles são:
                 </p>
             </div>
-        </section>
-        <div class=" flex items-center">
-            <div class="flex flex-col md:flex-row gap-6 m-10 md:gap-4">
-                <div class="w-full md:w-1/3">
-                    <div class="border border-stone-300 p-4">
-                        <h2 class="text-3xl font-bold py-4">CORES PRIMÁRIAS</h2>
-                        <h3 class="text-lg">Chamadas de cores puras, as cores primárias pois são a base das cores, delas
+                    </div>
+                    </div>
+        <div class="flex items-center">
+            <div class="grid grid-cols-1 sm:m-10 md:grid-cols-4 gap-6 m-6 md:gap-4 text-justify">
+                    <div class="border border-stone-300 p-4 rounded-lg">
+                        <h2 class="text-2xl font-bold py-4">CORES PRIMÁRIAS</h2>
+                        <h3>Chamadas de cores puras, as cores primárias pois são a base das cores, delas
                             surgem as tonalidades de cores e não é possível obtê-las pela mistura de outras cores.</h3>
                         <div class="flex gap-4 items-center justify-center p-4">
                             <div class="bg-red-500 w-10 h-10"></div>
@@ -618,24 +539,20 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                             <div class="bg-sky-500 w-10 h-10"></div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full md:w-1/3">
-                    <div class="border border-stone-300 p-4">
-                        <h2 class="text-3xl font-bold py-4">CORES SECUNDÁRIAS</h2>
-                        <h3 class="text-lg">A união de duas cores primárias, representam as três cores. Secundárias:
+                    <div class="border border-stone-300 p-4 rounded-lg">
+                        <h2 class="text-2xl font-bold py-4">CORES SECUNDÁRIAS</h2>
+                        <h3>A união de duas cores primárias, representam as três cores. Secundárias:
                             verde (azul e amarelo); laranja (amarelo e vermelho); roxo ou violeta (vermelho e azul).
                         </h3>
-                        <div class="flex gap-4 items-center justify-center p-4">
+                        <div class="flex gap-4 items-center justify-center p-4 rounded-lg">
                             <div class="bg-green-500 w-10 h-10"></div>
                             <div class="bg-orange-500 w-10 h-10"></div>
                             <div class="bg-purple-500 w-10 h-10"></div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full">
-                    <div class="border border-stone-300 p-4 w-full">
-                        <h2 class="text-3xl font-bold py-4">CORES TERCIÁRIAS</h2>
-                        <h3 class="text-lg">As cores terciárias são originadas pela combinação de uma cor primária com
+                    <div class="border border-stone-300 p-4 w-full rounded-lg">
+                        <h2 class="text-2xl font-bold py-4">CORES TERCIÁRIAS</h2>
+                        <h3>As cores terciárias são originadas pela combinação de uma cor primária com
                             outra cor secundária. Elas recebem esse nome por estarem localizadas entre as cores
                             primárias e secundárias no círculo cromático. Alguns exemplos dessas cores são:
                             vermelho-arroxeado (vermelho e roxo) e vermelho-alaranjado (vermelho e laranja);
@@ -652,13 +569,10 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                                 <div class="bg-blue-600 w-10 h-10"></div>
                             </div>
                         </div>
-                    </div>
-
                 </div>
-                <div class="w-full">
-                    <div class="border border-stone-300 p-4 w-full">
-                        <h2 class="text-3xl font-bold py-4">CORES QUENTES OU CORES FRIAS</h2>
-                        <h3 class="text-lg">São identificadas como temperatura das cores, são aquelas que transmitem
+                    <div class="border border-stone-300 p-4 rounded-lg">
+                        <h2 class="text-2xl font-bold py-4">CORES QUENTES E CORES FRIAS</h2>
+                        <h3 class="text-md">São identificadas como temperatura das cores, são aquelas que transmitem
                             calor ou frio.
                             Cores quentes: São associadas a fogo e luz, e elas são vermelho, laranja e amarelo.
                             Cores frias: transmitem a sensação de frio, associadas à água, são elas: azul, verde e
@@ -676,7 +590,6 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
                                 <div class="bg-purple-600 w-10 h-10"></div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -700,9 +613,11 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
 
             </div>
         </div>
+        </section>
         <section>
             <h1
-                class=" text-center justify-center font-bold sm:justify-start sm:text-start text--900 sm:text-7xl text-5xl p-6">
+            id="quizz-text"
+                class="  text-center justify-center font-bold sm:justify-start sm:text-start text--900 sm:text-7xl text-5xl p-6">
                 Quiz</h1>
             <div class="flex my-6 gap-4 items-center justify-center">
 
@@ -773,21 +688,9 @@ xl mb-10 table text-4xl m-auto sm:m-2 sm:mb-10 font-semibold text-transparent bg
             </div>
         </div>
     </main>
-    <footer class="bg-slate-200 dark:bg-gray-950 dark:text-gray-400 text-slate-800 text-center p-3">Desenvolvido por
-        <span class="hover:underline hover:cursor-pointer"><a
-                href="https://github.com/KaikeSathler?tab=overview&from=2023-09-01&to=2023-09-22">Kaike
-                Sathler</a></span><br>Kauã Rossanezi
-    </footer>
-    <footer class="bg-slate-800 p-3 text-slate-200 flex sm:flex-row flex-col gap-2 justify-center">
-        <a target="_blank" class="cursor-pointer flex items-center justify-center"
-            href="https://ifpr.edu.br/assis-chateaubriand/">
-            <img class="grayscale w-14 opacity-50 hover:opacity-100 transition-all duration-500"
-                src="./img/ckan-logo.png">
-        </a>
-        <div class=" flex items-center justify-center text-center"> IFPR, Instituto Federal do Paraná campus Assis
-            Chateaubriand.
-            Av. Cívica, 475 - Assis Chateaubriand, PR, 85935-000</div>
-    </footer>
+    <?php
+    require "./components/footer.php";
+    ?>
     <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
         integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="

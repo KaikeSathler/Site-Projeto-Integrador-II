@@ -49,16 +49,19 @@ if (isset($_SESSION['google_id']) || isset($_SESSION['ARTESDB_SESSION'])) {
       z-index: -1;
       background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
     ">
-    <div class="flex justify-center items-center gap-6 md:flex-row flex-col md:mt-0 mt-6">
-        <button id="button-canvas" class="p-4 bg-green-400 hover:bg-green-300 border border-green-400">
+    </div>
+    <?php if($resultados['pinturas_feitas'] >= 3) { ?>
+        <h1 class="border-2 bg-amber-400 p-2 text-amber-900 w-[30rem] text-center m-auto rounded-md mt-6"> *Aviso, vocẽ passou o limite de 3 pinturas por conta</h1>
+        <button class=" m-auto table mt-5 text-white hover:opacity-80"><a href="../index.php"
+                class="bg-sky-500 p-3 rounded flex items-center gap-1"><span>Voltar</span></a>
+        <?php } else { ?>
+            <div class="flex justify-center items-center gap-6 md:flex-row flex-col md:mt-0 mt-6">
+            <button id="button-canvas" class=" rounded-lg p-4 bg-green-400 hover:bg-green-300 border">
             <a class="text-green-950">Salvar Imagem</a>
         </button>
         <div id="canvas-editor" style="position: relative; top: 3rem ">
         </div>
-    </div>
-    <?php if($resultados['pinturas_feitas'] >= 3) { ?>
-        <h1>Você já fez 3 quizzes na sua conta, pague 10 reais para desbloquear o premium</h1>
-        <?php } else { ?>
+            </div>
     <script>
         $(document).ready(function () {
             var drawerPlugins = [
