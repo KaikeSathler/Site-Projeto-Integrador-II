@@ -1,22 +1,23 @@
-<span style="font-family: 'Times New Roman', serif; font-size: 2em;">Artes Visuais I</span> <img src="img/icon/icob.png" width="24px">
-
 ![GitHub repo size](https://img.shields.io/github/repo-size/kaikesathler/Site-Projeto-Integrador-II?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/kaikesathler/Site-Projeto-Integrador-II?style=for-the-badge)
 
-<img src="img/image_home.jpg" alt="Exemplo imagem">
+# Visuais I - Site | Aprendendo Novas Linguagens 🚀
 
-> Imagem ilustrativa pintada por Van Gogh
+Olá, seja bem-vindo ao site "Visuais I"! Este projeto foi desenvolvido com entusiasmo por mim, Kaike Sathler e meu amigo de classe, Kauã Rossanezi, enquanto aprendemos juntos novas linguagens e tecnologias web.
 
-### Ajustes e melhorias
+## Objetivo do Site 🎯
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+O "Visuais I" foi inspirado na matéria de Artes do Instituto Federal, onde exploramos conceitos de design visual e expressão artística. Ao criar este site, buscamos aplicar nosso aprendizado de forma prática e criativa, unindo tecnologia e arte de maneira inovadora.
 
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
+## Elementos Utilizados 🔧
 
+Ao desenvolver o "Visuais I", exploramos uma variedade de elementos, incluindo:
+
+- **Ferramenta de Pintura em JS**: Integrando uma ferramenta de pintura criativa utilizando JavaScript para explorar a expressão artística digital.
+- **Sistema de Login**: Implementando um sistema de login para oferecer uma experiência personalizada aos visitantes do site.
+- **Aprendizado sobre Arte*: Aprendendo sobre arte e outras formas de expressão artística para inspirar nosso design e conteúdo.
+
+Juntos, visamos unir conhecimento, criatividade e tecnologia para criar experiências digitais envolventes e inovadoras. Obrigado por nos visitar! 🌟
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
@@ -25,7 +26,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/104788755" width="100px;" alt="Foto do Kaike no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/104788755" width="100px;"/><br>
         <sub>
           <b>Kaike Sathler</b>
         </sub>
@@ -33,7 +34,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://image-aws-us-west-2.vsco.co/derivative/652488118b5c6a03df000003?h=639&w=480" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://img.freepik.com/premium-vector/user-profile-icon-flat-style-member-avatar-vector-illustration-isolated-background-human-permission-sign-business-concept_157943-15752.jpg?w=740" width="100px;"/><br>
         <sub>
           <b>Kauã Rossanezi</b>
         </sub>
