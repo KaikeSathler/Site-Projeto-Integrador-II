@@ -44,5 +44,3 @@ if (!empty($usuario_resposta)) {
         echo "Senha inválida!<br>";
     }
 }
-
-?>
